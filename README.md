@@ -100,12 +100,12 @@ Wait until the maintainers reviews your request.
 
 - Initial ideas due on: 2026/07/29
 
-- Final submissions due on:2026/08/06
+- Final submissions due on: 2026/08/06
 
 
 ## Questions?
 
-Open a [GitHub Discussion](../../discussions) in this repository — maintainers from both CodeDay and The Processing Foundation are active there.
+Questions regarding submissions? Check with the maintainers from The Processing Foundation on [Discord](http://discord.p5js.org/) or with the staff on CodeDay's Slack.
 
 ## Contributing to This Repository
 
