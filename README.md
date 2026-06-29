@@ -1,7 +1,7 @@
 # The Processing Foundation <> CodeDay
 
 
-## About This Collaboration
+## About This Collaboration 🤝
 
 The Processing Foundation joined hands with CodeDay to facilitate our Open Source Mentorship Programs by helping with providing issues and Subject Matter Expertise for the interns.
 
@@ -11,7 +11,7 @@ This repository serves as a combined effort to reflect on this collaboration by 
 
 ---
 
-## For Interns - How to Submit Your Proposal
+## For Interns - How to Submit Your Proposal?
 
 If you are an intern working with CodeDay on an issue from The Processing Foundation, the information below shows how you can submit your proposals to get them reviewed by maintainers.
 
@@ -19,7 +19,7 @@ If you are an intern working with CodeDay on an issue from The Processing Founda
 
 ---
 
-### Step-by-Step Guide
+### Step-by-Step Guide 🧗
 
 **Step 1 — Fork this repository**
 
@@ -96,7 +96,7 @@ Wait until the maintainers reviews your request.
 
 ---
 
-## Important Dates
+## Important Dates 🗓️
 
 - Initial ideas due on: 2026/07/29
 
