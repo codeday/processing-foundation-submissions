@@ -35,7 +35,7 @@ For example, if your mentor's name is John Doe, your repository's name should be
 proposal-submission-team-john-sose26
 ```
 
-> If you're a group of interns working as a team, ask any one team member to create the fork.
+> If you're a group of interns working as a team, ask any one team member to create the fork and submit the proposal on behalf of team.
 
 ---
 
