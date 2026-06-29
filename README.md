@@ -124,5 +124,5 @@ We welcome thoughtful contributions from interns, mentors, and the wider communi
  
 This repository is licensed under the [MIT License](./LICENSE).
  
-The license covers the repository structure, documentation, templates, and workflows maintained by CodeDay and The Processing Foundation. Proposal submissions made by interns inside the `Submissions SOSE 2026` folder remain the intellectual property of the respective interns and their mentors. CodeDay and The Processing Foundation make no claim of ownership over intern-authored proposal content.
+The license covers the repository structure, documentation, templates, and workflows maintained by CodeDay. Proposal submissions made by interns inside the `Submissions SOSE 2026` folder remain the intellectual property of the respective interns and their mentors. CodeDay and The Processing Foundation make no claim of ownership over intern-authored proposal content.
 
