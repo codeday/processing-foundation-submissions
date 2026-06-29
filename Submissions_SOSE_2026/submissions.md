@@ -1,10 +1,10 @@
 # Proposal Submission Template — SOSE 2026
 
-> Copy this file, rename it `proposal-team-"mentor's name".md`, and place it in the `Submissions SOSE 2026` folder. Do not raise a PR until your proposal is ready for final review. 
+> Copy this file, rename it `proposal-team-"mentor's name".md`, and place it in the `Submissions SOSE 2026` folder. Do not raise a PR until your proposal is ready for final review. All the items marked with an asterisk (*) are required.
 
 ---
 
-## Team Details 👥
+## Team Details* 👥
 
 **Mentor's Name:**
 
@@ -17,7 +17,7 @@
 
 ---
 
-## Processing Foundation Issue 📋
+## p5.js Issue* 📋
 
 *Details about the first issue assigned to your team.*
 
@@ -29,29 +29,29 @@
 
 ---
 
-## Abstract 📝
+## Abstract* 📝
 
 *3–5 sentences. What is the idea, why does it matter, and what do you plan to do?*
 
 ---
 
-## Problem Statement 📑
+## Problem Statement* 📑
 
 *What problem are you solving and who is affected by it?*
 
 ---
 
-## Proposed Solution 💡
+## Proposed Solution* 💡
 
 *High-level description of your approach and why you chose it.*
 
 ---
 
-## Research on old issues 🔭
+## Research on old issues* 🔭
 
 *If there are existing open issues that align with or validate your proposed idea, reference them here. Your proposal may also help revive or advance work that has stalled. If no directly related issue exists, demonstrate that you have researched the project's backlog by identifying similar or relevant issues. Include links to those issues and briefly explain.*
 
-## Impact 🛠️
+## Impact* 🛠️
 
 *Select all that apply and add a one-line explanation for each.*
 
@@ -73,13 +73,13 @@
 
 ---
 
-## Implementation Plan ⏳
+## Implementation Plan* ⏳
 
 *Week-by-week breakdown of how you plan to complete the work.*
 
 ---
 
-## Deliverables 📦
+## Deliverables* 📦
 
 *What will concretely exist at the end of the internship that does not exist today?*
 
