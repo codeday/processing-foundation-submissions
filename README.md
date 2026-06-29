@@ -107,10 +107,16 @@ Wait until the maintainers reviews your request.
 
 ## Questions?
 
-Questions regarding submissions? Check with the maintainers from The Processing Foundation on [Discord](http://discord.p5js.org/) or with the staff on CodeDay's Slack.
+Questions regarding submissions? Check with the maintainers from p5.js on [Discord](http://discord.p5js.org/) or with the staff on CodeDay's Slack.
 
 ## Contributing to This Repository
 
-This is a collaborative space maintained by CodeDay and The Processing Foundation, and we welcome thoughtful contributions from interns, mentors, and the wider community.
+This is a collaborative space maintained by CodeDay with inputs from Kit Kuksenok, current Engineering Manager / p5.js Project Lead representing The Processing Foundation.
 
-Whether you spotted a typo, think a step in the guide could be clearer, or have a suggestion that would make the submission process smoother for future interns — we'd love to hear from you.
+We welcome thoughtful contributions from interns, mentors, and the wider community. Whether you spotted a typo, think a step in the guide could be clearer, or have a suggestion that would make the submission process smoother for future interns — we'd love to hear from you.
+
+## Folks at The Processing Foundation
+
+- http://processingfoundation.org/people
+- http://processingfoundation.org/dev
+
