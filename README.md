@@ -3,7 +3,7 @@
 
 ## About This Collaboration 🤝
 
-The Processing Foundation joined hands with CodeDay to facilitate our Open Source Mentorship Programs by helping with providing issues and Subject Matter Expertise for the interns.
+The Processing Foundation joined hands with CodeDay to facilitate our Open Source Mentorship Programs by helping provide issues and Subject Matter Expertise for the interns.
 
 By leveraging the Processing Foundation's deep expertise in creative coding and digital arts education, interns will gain hands-on experience working on real-world projects that have a meaningful impact on artists, designers, and educators worldwide.
 
@@ -83,15 +83,15 @@ Fill in the contents to complete your proposal with all required fields.
 
 **Step 5 — Raise a Pull Request**
 
-Once the proposal is all set, raise a Pull Request from your branch to the `main` branch in the repository you created the fork from. Make sure to **mark the checklist** in your PR description before submitting. Your PR title shoudl be automatically populated.
+Once the proposal is all set, raise a Pull Request from your branch to the `main` branch in the repository you created the fork from. Make sure to **mark the checklist** in your PR description before submitting. Your PR title should be populated.
 
 ---
 
 **Step 6 — Wait for review**
 
-Wait until the maintainers reviews your request.
+Wait until the maintainers review your request.
 
-- ✅ **If approved** — the maintainer will create an issue on the particular Processing's project you wanted to work on for your proposal and you can start working on it.
+- ✅ **If approved** — the maintainer will create an issue on the particular p5.js project you wanted to work on for your proposal, and you can start working on it.
 - 🔁 **If changes are requested** — they will ask for revisions before it finally turns into a mergeable proposal. Make sure to update your proposal according to their feedback.
 
 ---
@@ -102,7 +102,7 @@ Wait until the maintainers reviews your request.
 
 - Final submissions due on: 2026/08/06
 
-  Refer to the [Onboarding module](https://codeday.notion.site/The-Processing-Foundation-Onboarding-Module-38dcb48bff9680a6bac4e31b2cd749fe) for more detailed information on proposal drafting timeline.
+  Refer to the [Onboarding module](https://codeday.notion.site/The-Processing-Foundation-Onboarding-Module-38dcb48bff9680a6bac4e31b2cd749fe) for more detailed information on the proposal drafting timeline.
 
 
 ## Questions?
@@ -111,7 +111,7 @@ Questions regarding submissions? Check with the maintainers from p5.js on [Disco
 
 ## Contributing to This Repository
 
-This is a collaborative space maintained by CodeDay with inputs from Kit Kuksenok, current Engineering Manager / p5.js Project Lead representing The Processing Foundation.
+This is a collaborative space maintained by CodeDay with input from Kit Kuksenok, current Engineering Manager / p5.js Project Lead representing The Processing Foundation.
 
 We welcome thoughtful contributions from interns, mentors, and the wider community. Whether you spotted a typo, think a step in the guide could be clearer, or have a suggestion that would make the submission process smoother for future interns — we'd love to hear from you.
 
