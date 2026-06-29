@@ -102,6 +102,8 @@ Wait until the maintainers reviews your request.
 
 - Final submissions due on: 2026/08/06
 
+  Refer to the [Onboarding module](https://codeday.notion.site/The-Processing-Foundation-Onboarding-Module-38dcb48bff9680a6bac4e31b2cd749fe) for more detailed information on proposal drafting timeline.
+
 
 ## Questions?
 
