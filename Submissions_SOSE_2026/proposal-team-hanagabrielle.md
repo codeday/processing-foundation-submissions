@@ -16,80 +16,75 @@
 
 ## p5.js Issue* 📋
 
-- **Related graphics context:** https://github.com/processing/p5.js/issues/8953
+- **Link to the issue:** https://github.com/processing/p5.js/issues/9041
 
-- Issue Title: Support transformation matrices in p5.strands
+- Issue Title: Benchmark cleanup passes `p5.model` to `freeGeometry`
 
-- Repository: https://github.com/processing/p5.js
-
-**Proposal status**: This benchmark-reliability proposal is independent of #8953’s assigned transformation-matrix work. I am requesting maintainer approval for this direction; if approved, I will work with maintainers to create or link the appropriate p5.js issue before implementation.
+- Repository: p5.js
 
 ---
 
 ## Abstract* 📝
 
-My proposal focuses on improving the reliability of the p5.js benchmarking suite. During local testing, I identified a reproducible defect in benchmark cleanup that emitted Friendly Error System (FES) validation messages while the benchmark still passed. I propose a focused audit of related geometry cleanup code, a maintainer-approved safeguard for unexpected validation messages, and reproducible benchmark guidance. The goal is to improve the diagnostic quality and maintainability of benchmark runs.
+My proposal fixes a reproducible benchmark-cleanup defect in p5.js. During local testing, I found that `freeGeometry()` received the `myp5.model` function reference instead of the geometry instance created by `buildGeometry()`, emitting a Friendly Error System (FES) validation message while the benchmark continued. The scoped change passes the generated `shape` instance to `freeGeometry()` and is verified through the affected benchmark. This work corrects invalid cleanup usage without changing p5.js or FES behavior more broadly.
 
 ---
 
 ## Problem Statement* 📑
 
-The p5.js benchmarking suite can report FES validation messages during setup or cleanup without failing the benchmark. In `cpu_transforms.bench.js`, `freeGeometry()` received the `myp5.model` function reference rather than the generated geometry instance. This invalid API usage produced messages while the benchmark continued to report results. After changing the cleanup call to pass the generated `shape` object, isolated WebGL and WebGPU benchmark runs completed without the prior FES messages. This indicates a benchmark-harness defect that should be corrected and used to guide a focused review of related cleanup code.
+In `test/bench/cpu_transforms.bench.js`, the cleanup call passed `myp5.model`—a function reference—to `freeGeometry()` rather than the `shape` geometry instance. This invalid API usage emitted an FES validation message while the benchmark continued to report results. Passing `shape` instead removes the observed message in isolated WebGL and WebGPU benchmark runs. Contributors and maintainers need the benchmark to execute its intended cleanup call correctly while evaluating CPU-transform behavior.
 
 ---
 
 ## Proposed Solution* 💡
 
-I propose to improve benchmark cleanup validation through the following work:
+I will submit the verified one-line correction in `test/bench/cpu_transforms.bench.js`:
 
-- Submit the verified correction to the `freeGeometry()` call in `cpu_transforms.bench.js`.
-- Audit related benchmark files that create and release `p5.Geometry` objects for similar API or lifecycle misuse.
-- Investigate a maintainer-approved benchmark-specific safeguard that clearly surfaces unexpected FES validation messages during benchmark runs.
-- Document a reproducible benchmark command, expected environment, and criteria for a clean benchmark run.
+```js
+myp5.freeGeometry(shape);
+```
 
-The exact audit scope and safeguard implementation will be confirmed with the maintainers before implementation.
+I will run the targeted CPU-transforms benchmark in its WebGL and WebGPU configurations before submitting the pull request. This narrow approach directly corrects the reported defect and follows the maintainer’s request to create Issue #9041 before opening a PR.
 
 ---
 
 ## Research on old issues and Maintainer Patterns* 🔭
 
-Issue https://github.com/processing/p5.js/issues/8953 documents ongoing work on p5.strands transformation support across graphics backends. Although the proposal does not implement the assigned transformation-matrix work, reliable benchmarks can support broader graphics evaluation.
+Issue https://github.com/processing/p5.js/issues/8953 documents ongoing work on p5.strands transformation support across graphics backends. It is relevant background for the project’s graphics direction, but this proposal does not implement its assigned transformation-matrix work.
 
-I also reviewed Modular FES https://github.com/processing/p5.js/pull/8887. This refactor moved FES into a dedicated module and introduced a shared `FES` interface for emitting messages, including `log`, `warn`, and `error`. Parameter validation now uses this shared interface to create user-facing diagnostics.  
+I also reviewed https://github.com/processing/p5.js/pull/8887, which modularized the Friendly Error System. My benchmark finding shows that invalid API usage can emit an FES validation message while a benchmark still passes. I will not assume that all FES messages should globally fail benchmarks; this proposal corrects the specific misuse tracked in https://github.com/processing/p5.js/issues/9041.
 
-My benchmark finding reveals an analogous unaddressed situation: invalid API usage can emit an FES validation message while a benchmark still passes. I will not assume that FES messages should globally fail benchmarks. Instead, I will work with maintainers to identify a narrow mechanism that detects unexpected validation output in benchmarks without creating false failures.
-
-No existing p5.js issue has yet been identified for the benchmark-harness defect described in this proposal. If approved, I will work with maintainers to create or link the appropriate issue before beginning implementation.
+---
 
 ## Impact* 🛠️
 
 - [X] **Bug Fix** — Corrects a verified invalid `freeGeometry()` call in `cpu_transforms.bench.js`.
-- [X] **Testing** — Makes benchmark validation problems easier to detect and investigate.
-- [X] **Contributor Experience** — Provides clear, reproducible instructions for running the affected benchmark.
-- [X] **Maintainability** — Reduces the chance that invalid geometry-cleanup usage persists unnoticed in related benchmark code.
+- [X] **Testing** — Verifies the correction through the affected WebGL and WebGPU benchmark runs.
 
 ---
 
 ## Inclusivity and Accessibility 🤝
 
-This project has no direct end-user accessibility feature. Clearer diagnostics and reproducible benchmark workflows may indirectly reduce contributor friction by making maintenance work easier to understand and validate.
+Not applicable — bug fix.
 
 ---
 
 ## Implementation Plan* ⏳
 
-- **Week 5 (Completed)**: Finalize the proposal, preserve reproduction logs, prepare the one-line fix, and map related benchmark files.
-- **Week 6**: Confirm scope with maintainers; decide whether a new issue is needed, and agree on the FES-safeguard approach.
-- **Week 7**: Implement the approved fix, focused audit findings, and agreed safeguard, run targeted validation.
-- **Week 8**: Submit or refine the PR based on review, add any approved documentation, and prepare the final technical presentation.
+- **Week 5 (Completed)**: Reproduce the benchmark message, identify the incorrect argument, and prepare the one-line correction.
+- **Week 6 (Completed)**: Discuss the finding with @davepagurek and create Issue #9041 as requested.
+- **Week 7**: Create the focused pull request, run the targeted WebGL and WebGPU benchmark validation, and request review.
+- **Week 8**: Respond to review feedback and document the result in the final technical presentation.
+
 ---
 
 ## Deliverables* 📦
 
-- A pull request correcting the `cpu_transforms.bench.js` cleanup defect.
-- Findings from an agreed, focused audit of related geometry benchmark cleanup.
-- A maintainer-approved safeguard or reporting improvement for unexpected FES validation messages in benchmark runs.
-- Reproducible benchmark-run instructions in the maintainer-approved documentation location.
+- A pull request correcting the cleanup call in `test/bench/cpu_transforms.bench.js`.
+- Targeted benchmark results for the WebGL and WebGPU configurations showing that the prior FES message no longer appears.
 
 ---
 
+## Anything Else?
+
+I discussed the finding with @davepagurek in the p5.js Discord before opening Issue #9041. The implementation is intentionally limited to the maintainer-confirmed correction.
